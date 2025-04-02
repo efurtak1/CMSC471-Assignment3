@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMSC471: Assignment 3</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .iframe-container {
+            margin-top: 20px;
+        }
+        .iframe-box {
+            width: 100%;
+            border: 1px solid #ccc; /* Optional: adds a border */
+            margin-bottom: 20px; /* Adds space between iframes */
+            height: 800px; /* Adjust height as needed */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment 3:</h1>
+        <hr>
+        <p id="value"></p>
+        <p>This assignment was based off of the Civilian Complaints Against New York City Police Officers dataset. This is a dataset compiled by ProPublica, an independent,
+             nonprofit investigative journalism newsroom. It contains more than 12,000 civilian complaints filed against the NYPD, with demographic
+             information about the complainant and officer, the category of the alleged misconduct, and the result of the complaint. </p>
+        <h1>White Hat:</h1>
+        <div class="iframe-container">
+            <div class="iframe-box">
+                <iframe src="https://public.tableau.com/app/profile/peyton.chang/viz/PoliceAllegationsbyEthnicity/PoliceAllegationsbyEthnicity"></iframe>
+            </div>
+            <div class="link-under-vis">
+                <a href="https://public.tableau.com/app/profile/peyton.chang/viz/PoliceAllegationsbyEthnicity/PoliceAllegationsbyEthnicity" target="_blank">View Full Visualization on Tableau</a>
+            </div>
+            <p>
+                The first visulization you see in the dashboard presented is composed of two visuals that plot the number of police allegations made by specific ethnicities from the years 2000 to 2020. 
+                The purpose of the visual is to highlight aspects of data that can help us better understand trends across different ethnic groups. The top half of the visual plots the cumulative number of allegations made
+                 against police officers over the span of 20 years, separated by ethnicity. This provides crucial information that helps us understand long-term trends that can be used to identify biases towards specific groups. 
+                 It also provides practical insight into how our policing practices are improving or worsening as time goes on. The bottom half of the visual plots the number of allegations made against police officers per year, 
+                 once again separated by ethnicity. Plotting the data annually provides more specific data by year and can help us discern whether specific groups are experiencing spikes or drops in allegations, which can correlate
+                  to current world events. The separation between plotting cumulative and annual data provides multiple views for any given year. The columns are separated by ethnicity, and each ethnicity is further split into more 
+                  columns, which are separated by years. The rows are used to plot cumulative data, which is computed using a calculation function, as well as annual data. To complement the visual, a legend was added that maps colors 
+                  to ethnicities, 
+                allowing the viewer to simply identify and differentiate ethnicities. Finally, date and ethnicity filters are included to provide flexibility to specify exactly what kind of data the viewer wants to plot.
+
+            </p>
+            <hr>
+            <h1>Black Hat:</h1>
+            <div class="iframe-box">
+                <iframe src="https://public.tableau.com/app/profile/william.yang7587/viz/CMSC471_ass3/PoliceBrutality"></iframe>
+            </div>
+            <div class="link-under-vis">
+                <a href="https://public.tableau.com/app/profile/william.yang7587/viz/CMSC471_ass3/PoliceBrutality" target="_blank">View Full Visualization on Tableua</a>
+            </div>
+            <p>This second visulaization represents the Black Hat visualization. This pie chart paints a narrative of police brutality in NY. The deceptiveness of this visualization first 
+                begins with how I group the data. Originally, the data contains several dozens of categories, but I manipulated the data to only contain a few. This allowed me to highlight the most explicit 
+                categories as how I see fit to drive the title's narrative. I also removed key categories to create manipulate the slices and make the provocative slices larger. The second manipulation lies 
+                the verbal encodings used. Asides from the aggressive title, I added examples of what the each category represents. The examples are real categories within the groupings; however, the original 
+                slices are much smaller than now shown. For example, under physical assault 'choking' and 'gunshots' only contains a 
+                small number of records, but 'physical violence' contained much more. The combination of the verbal encodings + manipulation of data paints a distorted picture of tha data</p>
+        </div>
+        <hr>
+        <h1>Development Process:  </h1>
+        <p>Our team split the work by first meeting to discuss datasets and project ideas, ultimately choosing police complaint data for its versatility. Tasks were divided evenly:
+             one member focused on the "white hat" analysis, another on the "black hat" perspective, and a third handled both sides while also managing the webpage, write-up, and video.
+              The visualizations came together smoothly through collaborative brainstorming, with frequent feedback shaping the final designs. In total, we spent roughly 10–12 people-hours on the project. 
+              The bulk of the time was dedicated to designing and refining the 
+            visualizations, as this required the most critical thinking and iterative adjustments. The remaining tasks (web integration, documentation, etc.) were more straightforward once the core analysis was solidified.</p>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
